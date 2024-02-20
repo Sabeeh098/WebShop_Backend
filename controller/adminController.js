@@ -30,5 +30,4 @@ const AdminLogin = async (req,res) => {
 
 module.exports = {
     AdminLogin,
-    
 }
