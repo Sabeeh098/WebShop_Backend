@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connectToDatabase = () => {
-  mongoose.connect(process.env.MONGODB, { useNewUrlParser: true, useUnifiedTopology: true })
+  mongoose.connect(process.env.MONGODB)
     .then(() => {
       console.log("Database connected");
     })

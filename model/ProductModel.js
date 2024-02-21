@@ -2,65 +2,49 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
-    sku: {
-        type: String,
+    sku:{
+        type:String
     },
-    language: {
-        type: String,
+    product_name:{
+        type:String
     },
-    categories:{
-        type: String,
+    category:{
+        type:String
     },
-    title:{
-        type:String,
-    },
-    description:{
-        type:String,
-    },
-    images:{
-        type:String,
-    },
-    tags:{
-        type:String,
-    },
-    price:{
-        type:Number,
-    },
-    weight:{
-        type:Number,
-    },
-    tax_value:{
-        type:String,
-    },
-    ean:{
-        type:String,
-    },
-    supplier_ref:{
-        type:String,
+    sub_category:{
+        type:String
     },
     brand:{
-        type:String,
+        type:String
     },
-    size:{
-        type:String,
+    unit:{
+        type:String
     },
-    size_mixed:{
-        type:String,
+    minimum_qty:{
+        type:Number
     },
-    colors:{
-        type:String,
+    quantity:{
+        type:Number
     },
-    dog_jacket_type:{
-        type:String,
+    description:{
+        type:String
     },
-    supplier:{
-        type:String,
+    tax:{
+        type:String
     },
-    dog_jacket_size:{
-        type:String,
+    discount_type:{
+        type:Number
     },
-   
-},
+    price:{
+        type:Number
+    },
+    status:{
+        type:String
+    },
+    images:{
+        type:String
+    }
+    },
 {
     timestamps: true
 })

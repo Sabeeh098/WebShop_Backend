@@ -3,7 +3,8 @@ const cors = require("cors")
 const bodyParse = require("body-parser");
 const cookieParser = require("cookie-parser");
 const dbConnect = require("./database/database")
-const adminRoutes = require("./routes/adminRoutes")
+const adminRoutes = require("./routes/adminRoutes");
+const productRoutes = require("./routes/productRoutes");
 require("dotenv").config()
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(express.urlencoded( { extended: true }));
 app.use(cookieParser())
 
 app.use("/",adminRoutes);
+
+app.use("/product",productRoutes)
 
 dbConnect()
 const PORT = process.env.PORT || 4000;

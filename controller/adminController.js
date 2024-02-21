@@ -13,7 +13,7 @@ const AdminLogin = async (req,res) => {
         }
 
         const token = generateToken(admin._id,"admin");
-
+        
         res.status(200).json({
             message: "Login Successful",
             name:admin?.name,
